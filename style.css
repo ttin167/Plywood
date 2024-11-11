@@ -1,0 +1,144 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    flex: 1;
+}
+.navbar-brand img {
+    margin-right: 8px; /* Khoảng cách giữa logo và văn bản */
+}
+
+.navbar .nav-link {
+    color: #fff; /* Màu chữ trong navbar */
+}
+
+.navbar .nav-link:hover {
+    color: #f4a261; /* Màu hover của link */
+}
+.navbar {
+    background-color: #48260d !important; /* Đặt màu nền của navbar */
+    padding: 1rem 2rem;
+}
+
+h2 {
+    margin-top: 5px;
+    color: #48260d;
+    text-align: center;
+}
+
+
+/* Button */
+.btn-primary {
+    background-color: #48260d; /* Nền nút bấm chính */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #64331a;
+    border-color: #64331a;
+}
+
+/* Phần Sản phẩm */
+.card .btn-info {
+    background-color: #48260d; /* Nút sản phẩm */
+    color: #fff;
+}
+
+.card .btn-info:hover {
+    background-color: #3a1c0f; /* Màu tối khi hover */
+}
+
+/* Footer */
+.footer {
+    background-color: #48260d !important ; /* Màu nền footer */
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #ddd;}
+
+footer a:hover {
+    color: #e76f51; /* Màu hover cho liên kết */
+}
+
+/* Thanh Điều Hướng (Navbar) với icon */
+.navbar .nav-link i {
+    margin-right: 5px;
+}
+
+/* Giỏ Hàng */
+#cart-count {
+    background-color: #f4a261; /* Nền màu của số lượng giỏ hàng */
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 50%;
+}
+
+/* Sản phẩm */
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+    transition: transform 0.3s;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 8px;
+    border: none;
+}
+
+
+    .logo {
+        width: 150px; /* Điều chỉnh kích thước logo */
+        height: auto; /* Giữ tỷ lệ logo */
+        margin: 10px; /* Thêm khoảng cách xung quanh logo */
+        display:block ;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ nhẹ */
+      }
+
+      .logo:hover {
+        transform: scale(1.1); /* Phóng to logo khi hover */
+        transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+      }
+
+      
+
+/* Sửa lại một chút cho giao diện Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
