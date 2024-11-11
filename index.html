@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VÁN ÉP CÀ PHÊ</title>
+    <!-- Bootstrap CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand" href="#">
+            <img src="image/GE.jpg" alt="Logo Công Ty" class="logo" width="80" height="80">
+        </a>
+        <div class="d-flex">
+            <a href="#" class="text-white mx-2"><i class="bi bi-house"></i> Trang chủ</a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-box-seam"></i> Sản phẩm</a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-telephone"></i> Liên hệ</a>
+            <button id="cartButton" class="btn btn-outline-light position-relative">
+                <i class="fas fa-shopping-cart"></i> Giỏ hàng
+                <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </button>      
+        </div>
+    </div>
+</nav>
+
+    <header class="container text-center mt-4">
+        <h1>VÁN GỖ ÉP TỪ BÃ CÀ PHÊ</h1>
+        <p>Giải pháp nội thất bền vững cho ngôi nhà của bạn</p>
+    </header>
+
+    <!-- Product Section with Filter -->
+    <section id="products" class="container py-5">
+        <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
+      
+        </div>
+        <div class="row" id="product-list">
+            
+            <div class="col-md-4 mb-4 product" data-name ="Ván ép loại 1" data-price="160000">
+                <div class="card">
+                    <img src="image/z6016376365355_a0bb6b998bcd47815d8d89b6fe86fb1c.jpg" class="card-img-top" alt="Ván Ép A">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"> Ván ép loại 1</h5>
+                        <p class="card-text">Giá: 160,000 VND</p>
+                        <button class="btn btn-primary detail-btn">Chi tiết</button>
+                        <button class="btn btn-success">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-name ="Ván ép loại 2" data-price="140000">
+                <div class="card">
+                    <img src="image/z6016379792850_c3a672c43977e12e04012f2a932b86ee.jpg" class="card-img-top" alt="Ván Ép B">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ván ép loại 2</h5>
+                        <p class="card-text">Giá: 140,000 VND</p>
+                        <button class="btn btn-primary detail-btn">Chi tiết</button>
+                        <button class="btn btn-success">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4 product" data-name ="Ván ép loại 3" data-price="120000">
+                <div class="card">
+                    <img src="image/z6016388315179_697a75969a130024170db611efdfe338.jpg" class="card-img-top" alt="Ván Ép C">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"> Ván ép loại 3</h5>
+                        <p class="card-text">Giá: 120,000 VND</p>
+                        <button class="btn btn-primary detail-btn">Chi tiết</button>
+                <button class="btn btn-success">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+  <!-- Modal chi tiết sản phẩm -->
+  <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productDetailModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Số lượng:</label>
+                        <input type="number" class="form-control" id="quantity" min="1" value="1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="size" class="form-label">Kích thước:</label>
+                        <select id="size" class="form-select">
+                            <option value="600x860">600mm x 860mm</option>
+                            <option value="1200x2440">1200mm x 2440mm</option>
+                            <option value="1255x2321">1255mm x 2321mm</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="materialRatio" class="form-label">Tỷ lệ vật liệu:</label>
+                        <div class="d-flex align-items-center">
+                            <span id="woodRatio">50%</span> Gỗ / <span id="coffeeRatio">50%</span> Cà phê
+                        </div>
+                        <input type="range" class="form-range" id="materialRatio" min="0" max="100" value="50">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary add-to-cart-btn">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal chi tiết giỏ hàng -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Giỏ hàng của bạn</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItemsContainer">
+                    <!-- Sản phẩm trong giỏ hàng sẽ được thêm vào đây -->
+                </div>
+                <div id="cartTotal" class="text-end mt-3">
+                    <strong>Tổng cộng:</strong> <span id="cartTotalAmount">0 VND</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-success">Thanh toán</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class=" footer bg-dark text-light text-center p-3">
+        <p>&copy; CÔNG TY TNHH GREEN ECONOMY</p>
+        <p>
+            <i class="fas fa-phone-alt"></i> Số điện thoại: <a href="tel:0938691122" class="text-light">093 869 11 22</a><br>
+            <i class="fas fa-envelope"></i> Email: <a href="23641247@kthcm.edu.vn" class="text-light">23641247@kthcm.edu.vn</a><br>
+            <i class="fab fa-facebook"></i> Facebook: <a href="https://www.facebook.com/profile.php?id=100047201774822" target="_blank" class="text-light">facebook.com</a>
+        </p>
+    </footer>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+      let cart = [];
+
+      document.querySelectorAll('.detail-btn').forEach(button => {
+          button.addEventListener('click', function() {
+              const product = this.closest('.product');
+              const productName = product.getAttribute('data-name');
+              document.getElementById('productDetailModalLabel').textContent = productName;
+              const modal = new bootstrap.Modal(document.getElementById('productDetailModal'));
+              modal.show();
+          });
+      });
+
+      const materialRatioSlider = document.getElementById('materialRatio');
+      const woodRatioText = document.getElementById('woodRatio');
+      const coffeeRatioText = document.getElementById('coffeeRatio');
+
+      materialRatioSlider.addEventListener('input', function() {
+          woodRatioText.textContent = `${this.value}%`;
+          coffeeRatioText.textContent = `${100 - this.value}%`;
+      });
+
+      document.querySelector('.add-to-cart-btn').addEventListener('click', function() {
+    const productName = document.getElementById('productDetailModalLabel').textContent;
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const size = document.getElementById('size').value;
+    const woodRatio = materialRatioSlider.value;
+    const coffeeRatio = 100 - woodRatio;
+    const productPrice = parseInt(document.querySelector(`[data-name="${productName}"]`).getAttribute('data-price'));
+
+    cart.push({ name: productName, quantity, size, woodRatio, coffeeRatio, price: productPrice });
+    document.getElementById('cart-count').textContent = cart.length;
+
+    const modal = bootstrap.Modal.getInstance(document.getElementById('productDetailModal'));
+    modal.hide();
+});
+
+ // Hiển thị modal giỏ hàng
+document.getElementById('cartButton').addEventListener('click', function() {
+    updateCartDisplay();
+    const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+    cartModal.show();
+});
+
+// Cập nhật giỏ hàng
+function updateCartDisplay() {
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
+    cartItemsContainer.innerHTML = '';
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Giỏ hàng của bạn trống.</p>';
+        document.getElementById('cartTotalAmount').textContent = '0 VND';
+        return;
+    }
+
+    let totalAmount = 0;
+    cart.forEach((item) => {
+        const itemPrice = item.price; // Use the stored price
+        const itemTotal = item.quantity * itemPrice;
+        totalAmount += itemTotal;
+
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `
+            <div>
+                <h6>${item.name}</h6>
+                <small>Số lượng: ${item.quantity}, Kích thước: ${item.size}</small><br>
+                <small>Tỷ lệ: ${item.woodRatio}% Gỗ / ${item.coffeeRatio}% Cà phê</small>
+            </div>
+            <div>${itemTotal.toLocaleString()} VND</div>
+        `;
+        cartItemsContainer.appendChild(cartItem);
+    });
+
+    document.getElementById('cartTotalAmount').textContent = `${totalAmount.toLocaleString()} VND`;
+}
+    </script>
+</body>
+</html>
